@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme UI</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{{ url_for('static', filename='image.png') }}" alt="TAF_LOGO">
+            <div class="connecting">
+                <div class="device-selection">
+                    <!-- <select id="portSelect" onchange="updateSelectedPort()"></select> -->
+                                    
+                    <button id="connectButton">Connect to COM Port</button>
+                    <p id="status">Status: Not Connected</p>
+                    <p id="data"></p>
+                </div>
+                    <!-- <img id="imgButton" src="{{ url_for('static', filename='refresh_circle_icon.png') }}" onclick="loadPorts()" alt="Button Image" > -->
+                </button>
+                <label id="selectedPortLabel"></label>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="left-panel">
+                <ul id="navigation">
+                    <li class="nav-item" data-target="content1">Main Info</li>
+                    <li class="nav-item" data-target="content2">Configurator</li>
+                    <!-- <li class="nav-item" data-target="content3">Item 3</li> -->
+                </ul>
+            </div>
+            <div class="right-panel">
+                <div id="content1" class="content-panel">Content for Item 1</div>
+                <div id="content2" class="content-panel">Content for Item 2</div>
+                <!-- <div id="content3" class="content-panel">Content for Item 3</div> -->
+            </div>
+        </div>
+        <div class="footer">
+            Author: Shershen
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>

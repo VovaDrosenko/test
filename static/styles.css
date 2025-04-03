@@ -1,0 +1,215 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+    font-family: sans-serif;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+.header img {
+    height: 80px;
+    filter: invert(50%) sepia(50%) saturate(10000%) hue-rotate(0deg) brightness(70%);
+    
+    
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures left and right alignment */
+    padding: 15px 20px;
+    background-color: #212121;
+    border-bottom: 1px solid #333;
+}
+
+.connecting {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    justify-content: space-between;
+}
+
+.device-selection {
+    display: flex;
+    align-items: center;
+}
+
+#imgButton {
+    margin-left: 5px;  /* Add margin to the left of the select list */
+    height: 50px;  /* Match the height of the select list */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0; /* Remove any padding */
+    padding: 10px;
+}
+
+
+.device-selection select {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    height: 40px; /* Set height to match the button height */
+    margin-right: 5px;
+}
+
+.header a:hover {
+    background-color: #852100;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
+}
+
+/* Panels */
+.left-panel, .right-panel {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10; /* Removes default margin */
+}
+
+.left-panel {
+    width: 30%;
+    flex: 1;
+    justify-content: center; /* Centers the nav items horizontally */
+    /* min-width: 280px; */
+}
+
+.right-panel {
+    width: 70%;
+    flex: 3;
+}
+
+/* Navigation styles */
+#navigation {
+    list-style-type: none; /* Removes the default list dots */
+    padding: 0px 10px; /* Removes default padding */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: left; /* Center items horizontally */
+    gap: 20px; /* Adds space between items */
+}
+
+
+.nav-item {
+    padding: 10px 20px; /* Adds padding for better clickable area */
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
+
+.nav-item:hover {
+    background-color: #444;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.nav-item.active {
+    background-color: #852100; /* Active item color */
+}
+
+/* Content Panel */
+.content-panel {
+    display: none; /* Hide content panels initially */
+}
+
+/* Active content */
+.content-panel.active {
+    margin: 20px;
+    display: block; /* Display the active content panel */
+}
+/* Inputs & Forms */
+.device-selection select {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.auto-connect label,
+.expert-mode label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.auto-connect input[type="checkbox"],
+.expert-mode input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #444;
+    font-size: 0.9em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1000px) {
+    .main-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        margin-right: 20px;
+        padding: 0px;
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Ensures left and right alignment */
+        padding: 15px 20px;
+        background-color: #212121;
+        border-bottom: 1px solid #333;
+    }
+
+    .connecting {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row; /* Change to row to keep button and select list inline */
+        justify-content: flex-end; /* Align both elements to the start */
+        align-items: center; /* Ensure the button and select list align vertically */
+        gap: 5px; /* Add space between button and select list */
+        margin-bottom: 10px; /* Optional: Adds spacing between the image and elements below */
+    }
+
+    .device-selection {
+        margin-right: 0px;
+    }
+    
+}
+
